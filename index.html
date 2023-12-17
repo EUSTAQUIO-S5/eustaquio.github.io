@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f0f0f0;
+            /* Background Image */
+            background-image: url('estetik.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 8px 16px;
+            margin: 0 10px;
+            background-color: #ffcc99;
+            border-radius: 5px;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab:hover,
+        .tab.active {
+            background-color: #ffd699;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #fff3e6;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .back-button {
+            display: none;
+            margin-bottom: 15px;
+        }
+
+        .back-button button {
+            background-color: #ffd699;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button button:hover {
+            background-color: #ffcc99;
+        }
+
+        /* Styles for About Me section */
+        .about-me-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .about-me-content img {
+            max-width: 200px;
+            border-radius: 5px;
+        }
+
+        .about-me-text {
+            flex: 1;
+        }
+
+        /* Styles for Works section */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        /* Additional styles for contact information table */
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .contact-table th {
+            background-color: #f5f5f5;
+        }
+
+        .contact-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Additional styles for the introductory section */
+        .intro-section {
+            text-align: center;
+            margin-top: 100px; 
+        }
+
+        .intro-section h1 {
+            font-size: 4em;
+        }
+
+        .intro-section button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ffd699;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .intro-section button:hover {
+            background-color: #ffcc99;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Work Portfolio</h1>
+        <div class="tab-container">
+            <div class="tab active" data-tab="home">Home</div>
+            <div class="tab active" data-tab="aboutMe">About Me</div>
+            <div class="tab" data-tab="works">Works</div>
+            <div class="tab" data-tab="reflections">Reflection and Learnings</div>
+            <div class="tab" data-tab="contactInfo">Contact Information</div>
+        </div>
+    </header>
+
+    <!-- Back button -->
+    <div class="back-button">
+        <button id="backButton">Back</button>
+    </div>
+
+    <!-- Introductory Section -->
+    <section class="tab-content active" id="home">
+        <div class="intro-section">
+            <h1>Want to know more about me? </h1>
+            <button id="getStarted">Let's Get Started</button>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="tab-content" id="aboutMe">
+        <div class="about-me-content">
+            <img src="itsme.jpg" alt="Your Photo">
+            <div class="about-me-text">
+                <p>Hi there! I'm Neil Marco C. Eustaquio currently a 3rd year Computer Engineering student @ Technological Institute of the Philippines</p>
+                <p>
+                    I'm a student who is fascinated about technologies and how they work. What I like about technologies is how they make our lives easy and interesting. I see a lot of opportunities as well, knowing that our world is rapidly leaning towards modernization and advancement. With this passion and knowledge, I'm striving to be a part of our future.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Works Section -->
+    <section class="tab-content" id="works">
+        <h2>Prelims</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>GitHub</th>
+                    <th>Google Drive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hands-On Activity 1 - Creating Virtual Machines</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5" target="_blank">HOA1_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1oMD5h-WixfiLHlKRPexwJ_sWmAoHt7vn/view?usp=drive_link" target="_blank">HOA1_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 2 - SSH Key-Based Authentication and GIT Setup</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5" target="_blank">HOA2_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1RHqUmLUWXAl-rqHvAP2hvltlTGLo5TPx/view?usp=drive_link" target="_blank">HOA2_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 3 - Install SSH server on CentOS or RHEL 8</td>
+                    <td><a href="https://github.com/your_username/prelim-hoa" target="_blank">HOA3_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1kMuaMFuVRn7emE78CssjSbFUUafARWED/view?usp=drive_link" target="_blank">HOA3_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 4 - Ansible Basics</td>
+                    <td><a href="https://github.com/your_username/prelim-hoa" target="_blank">HOA4_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1DqdGe44F-BG9EcQtazZvvxJCRge4EZR2/view?usp=drive_link" target="_blank">HOA4_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 5 - Implement Ansible roles in playbooks</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/new_cpe232nmce" target="_blank">HOA5_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1FQYj5wOoFA2_qXCA93u5vXx4BMvpcLix/view?usp=drive_link" target="_blank">HOA5_file</a></td>
+                </tr>
+                <tr>
+                    <td>Prelim Exam </td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/Eustaquio_PrelimExam" target="_blank">PrelimExam_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1EvWFGzygVyK2mJJl3_rMuMpsXn_X5iQy/view?usp=drive_link" target="_blank">PrelimExam_file</a></td>
+                </tr>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Midterms</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>GitHub</th>
+                <th>Google Drive</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Hands-On Activity 6 - Targeting Specific Nodes</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/CPE232_EustaquioNM" target="_blank">HOA6_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1XF_fMQp8HK2Pyno3fPwkln0mKP0YnUv4/view?usp=drive_link" target="_blank">HOA6_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 7 - Managing Files and Creating Roles in Ansible</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/HOA7.1" target="_blank">HOA7_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/13x-FrN9s_30y6Yv3mqcauRhW6vVmYWlH/view?usp=drive_link" target="_blank">HOA7_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 8 - Install, Configure, and Manage Enterprise Availability Monitoring via Ansible</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/HOA8.1" target="_blank">HOA8_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1y30Da_QT4PfHWJYM62kwbTm5P2g5RdLe/view?usp=drive_link" target="_blank">HOA8_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 9 - Install, Configure and Manage Enterprise Performance Monitoring via Ansible</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/CPE232_hoa9" target="_blank">HOA9_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1vIfJYLcq1ty3aDMq7KRMDsUTMOZ7fj3j/view?usp=drive_link" target="_blank">HOA9_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 10 - Install, Configure and Manage Enterprise Log Monitoring via Ansible</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/HOA10.1" target="_blank">HOA10_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/18kD5rb8PMaS6AhkG0btmtRbmhq98CLsX/view?usp=drive_link" target="_blank">HOA10_file</a></td>
+                </tr>
+                <tr>
+                    <td>Midterms Exam </td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/CPE_MIDEXAM_EUSTAQUIO" target="_blank">MidtermExam_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1okH-LdU4jdxvi7PxtSIMdCSULKOKq3Ju/view?usp=drive_link" target="_blank">MidtermExam_file</a></td>
+                </tr>
+            </tr>
+        </tbody>
+    </table>
+                <h2>Finals</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>GitHub</th>
+                    <th>Google Drive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hands-On Activity 11 - Containerization</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/HOA11.1" target="_blank">HOA11_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1eMFNPJfpeMhe_ePKP7KCG6FREKMG5FPK/view?usp=drive_link" target="_blank">HOA11_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 12 -  Build a Sample Web App in a Docker Container</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/HOA12.1" target="_blank">HOA12_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1X-YdU4AUmttZII9Q1FltOGFWVPSZfTdq/view?usp=drive_link" target="_blank">HO12_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 13 - OpenStack Prerequisite Installation</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/HOA13.1" target="_blank">HOA13_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1rDqdobb50XAnsgimgra5VFJAPwaURnYv/view?usp=drive_link" target="_blank">HOA13_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 14 - OpenStack Prerequisite Installation</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/HOA14.1" target="_blank">HOA14_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1ESaQzX5L-gJe-pWm5MDNIv1eZ_oOC0Q6/view?usp=drive_link" target="_blank">HOA14_file</a></td>
+                </tr>
+                <tr>
+                    <td>Hands-On Activity 15 -  OpenStack Installation (Neutron, Horizon, Cinder)</td>
+                    <td><a href="https://github.com/EUSTAQUIO-S5/HOA15.1" target="_blank">HOA15_git</a></td>
+                    <td><a href="https://drive.google.com/file/d/1E8dytRlyrbhFoDveEPIu1KaP8MKsZF3C/view?usp=drive_link" target="_blank">HOA15_file</a></td>
+                </tr>
+                <tr>
+                    <td>Final Exam </td>
+                    <td><a href="https://github.com/your_username/prelim-hoa" target="_blank">FinalExam_Git</a></td>
+                    <td><a href="https://drive.google.com/your_googledrive_link" target="_blank">FinalExam_file</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Reflections Section -->
+    <section class="tab-content" id="reflections">
+        <h2>Reflection and Learnings</h2>
+        <p>After completing this course, I can proudly say that  have learned a lot in this course on managing enterprise servers with DevOps,
+             I have learned to create and automate servers set ups using virtual machines through using tools such as Ansible which I can say that its one of the most useful thing
+              I learned to date, also my integrating real life examples really helped me a lot in understanding hwo things works pratically. Exploring different tools in 
+              this course have expanded my knowledge and view on how the things that I have learned would help me in the future careers that I can pursue sicne this kind of 
+              knowlegde would be very beneficial for companies and business owners, aside from learning technical things I can say that it also help me improve my problem 
+              solving skill due to the errors that I have encountered through out this course that I managed to overcome. I am now very excited on using all my learning 
+              that I can use on the next course and also my future works.</p>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="tab-content" id="contactInfo">
+        <h2>Contact Information</h2>
+        <table class="contact-table">
+            <tbody>
+                <tr>
+                    <th>Date of Birth</th>
+                    <td>December 20, 2002</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>Parang , Marikina City</td>
+                </tr>
+                <tr>
+                    <th>Phone Number</th>
+                    <td>+639566171953</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>qnmeustaquio@tip.edu.ph</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const backButton = document.querySelector('.back-button');
+        const getStartedButton = document.getElementById('getStarted');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+                backButton.style.display = 'block';
+            });
+        });
+
+        getStartedButton.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            document.querySelector('.tab[data-tab="aboutMe"]').classList.add('active');
+            document.getElementById('aboutMe').classList.add('active');
+            backButton.style.display = 'block';
+
+            document.getElementById('home').classList.remove('active');
+        });
+
+        document.getElementById('backButton').addEventListener('click', () => {
+            backButton.style.display = 'none';
+            tabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            document.getElementById('home').classList.add('active'); // Show the home page on clicking the back button
+        });
+        
+    </script>
+</body>
+
+</html>
